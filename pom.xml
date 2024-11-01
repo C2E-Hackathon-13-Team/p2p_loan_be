@@ -70,19 +70,29 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.33</version> <!-- 或者选择其他合适的版本 -->
 		</dependency>
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.7.4</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
 			<version>5.8.32</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.12.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.fastjson2</groupId>
+			<artifactId>fastjson2</artifactId>
+			<version>2.0.53</version>
+		</dependency>
+
 
 
 
@@ -95,17 +105,20 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+
+
 			<plugin>
 				<groupId>org.web3j</groupId>
 				<artifactId>web3j-maven-plugin</artifactId>
-				<version>4.12.2-SNAPSHOT</version>
+				<version>4.10.3</version>
+
 				<configuration>
-					<packageName>com.p2p.loan.backend.entity</packageName>
+					<packageName>com.p2p.loan.backend.model</packageName>
 					<sourceDestination>src/main/java/generated</sourceDestination>
 					<nativeJavaType>true</nativeJavaType>
 					<outputFormat>java,bin</outputFormat>
 					<soliditySourceFiles>
-						<directory>src/main/resources</directory>
+						<directory>E:/web3/p2p_loan_contracts/</directory>
 						<includes>
 							<include>**/*.sol</include>
 						</includes>
