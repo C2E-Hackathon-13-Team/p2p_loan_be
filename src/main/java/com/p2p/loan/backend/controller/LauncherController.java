@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("launcher")
 @Tag(name = "筹资人")
+@CrossOrigin(origins = "*")
 @Slf4j
 public class LauncherController {
 
