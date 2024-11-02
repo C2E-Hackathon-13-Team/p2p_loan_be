@@ -14,5 +14,5 @@ import com.p2p.loan.backend.vo.RegisterLauncherReqVO;
  */
 public interface ILauncherService extends IService<Launcher> {
 
-    Boolean registerLauncher(RegisterLauncherReqVO param);
+    Boolean registerLauncher(RegisterLauncherReqVO param) throws Exception;
 }

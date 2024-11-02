@@ -24,7 +24,7 @@ public class LauncherController {
     @Operation(summary = "注册筹资人")
     @PostMapping("/registerLauncher")
     @ResponseBody
-    public RespBodyVO<Boolean> registerLauncher(@RequestBody RegisterLauncherReqVO param){
+    public RespBodyVO<Boolean> registerLauncher(@RequestBody RegisterLauncherReqVO param) throws Exception {
         return RespBodyVO.success(launcherService.registerLauncher(param));
     }
 
